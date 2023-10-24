@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Поисковик</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .center-container {
+            text-align: center;
+            margin: 1000px auto;
+            max-width: 400px;
+            animation: breathe 4s infinite ease-in-out;
+        }
+
+        img {
+            max-width: 100%;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #4285f4;
+        }
+
+        input[type="submit"] {
+            background-color: #4285f4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #357ABD;
+        }
+
+        @keyframes breathe {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    
+    <div style="text-align: center;">
+        <!-- Вставьте свою картинку и название сайта здесь -->
+        <img src="https://cdn.discordapp.com/attachments/1079900582086709472/1166466997786267648/hooy.png?ex=654a980c&is=6538230c&hm=35b34817a34357fd1a217742d543f727df0f12b3ba209cb2f78aff3eb0604ee1&" alt="ХУЙУGLE">
+    </div>
+
+    <div style="text-align: center;">
+        <!-- Форма поиска Google -->
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" placeholder="Найди в ХУЙУGLE" style="width: 300px;">
+            <input type="submit" value="Поиск">
+        </form>
+    </div>
+    <script>
+        // JavaScript для перенаправления на https://chat.openai.com
+        document.getElementById("search-form").addEventListener("submit", function(event) {
+            var searchInput = document.querySelector('input[name="q"]');
+            if (searchInput.value.toLowerCase() === "open chatgpt") {
+                event.preventDefault(); // Остановить отправку формы
+                window.location.href = "https://chat.openai.com";
+            }
+        });
+    </script>
+</body>
+</html>
